@@ -1,0 +1,8 @@
+{
+	"name" : "my-server",
+	"version" : "0.0.0",
+	"main" : "server.js",
+	"dependency" : {
+		"express":"3.x.x"
+	}
+}
