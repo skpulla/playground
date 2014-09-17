@@ -68,6 +68,15 @@
         });
 
         $('#form-add-user').on('click', '#btn-adduser-submit', createUser);
+        $('#form-login-user').on('click', '#btn-login-submit', function(){
+            var username = $('#form-username').val();
+            var password = $('#form-password').val();
+            login(username, password);
+        });
+        $('#header-mylist').on('click', '#btn-logout', function(){
+            client.logout();
+        });
+
 
         function createUser() {
             var fullname = $('#form-new-fullname').val();
@@ -194,6 +203,7 @@
     <section id="page-main" data-role="page">
         <header id="header-mylist" data-role="header" data-position="fixed" data-theme="a">
             <a id="btn-new" data-role="button" data-icon="plus" data-iconpos="right" data-inline="true" href="#page-add" class="ui-btn-right">New</a>
+            <a id="btn-logout" data-role="button" data-icon="arrow-l" data-iconpos="left" data-inline="true" href="#page-login" class="ui-btn-left">Logout</a>
             <h1>My Bucket List</h1>
         </header>
         <!-- /header -->
